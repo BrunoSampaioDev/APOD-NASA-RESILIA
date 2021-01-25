@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d81cb3bdde.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <title>NASA - APOD PROJECT</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="./assets/img/logo-nasa.png">
+    </div>
+    <div class="container-principal" data-image>
+        
+        
+        <img src="./assets/img/back-nasa.jpg" >
+    </div>
+
+    <div class="decricao">
+        <h3 class="title" data-title>APOD PROJECT</h3>
+        <p class="text" data-splaner>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry  ummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy</p>
+        <nav class="menu">
+            <p><i class="fab fa-squarespace" data-actForm></i></p>
+            <a><i class="fas fa-angle-left" onclick="enviar.previousDate()"></i></a>
+            <a><i class="fas fa-angle-right" onclick="enviar.nextDate()"></i></a>
+        </nav>
+    </div>
+
+    <div class="formulario invisible" onsubmit="enviar.enviarData(event)" data-form>
+        <form id="data" >
+            <label for="title-form">Escolha a data</label>
+            <input type="date" data-date>
+            <input type="submit" data-enviar>
+        </form>
+    </div>
+    <script src="./js/app/models/DataModel.js"></script>
+    <script src="./js/app/controllers/DataController.js"></script>
+    <script src="./js/app/views/DataView.js"></script>
+    <script src="./js/app/helpers/ShowForm.js"></script>
+    <script>
+        let enviar = new DataController();
+    </script>
+</body>
+</html>
